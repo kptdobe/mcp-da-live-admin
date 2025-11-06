@@ -10,6 +10,7 @@ import { zodToJsonSchema } from 'zod-to-json-schema';
 
 import * as list from './operations/list.js';
 import * as source from './operations/source.js';
+import * as media from './operations/media.js';
 import { VERSION } from './common/global.js';
 
 const server = new Server(
@@ -33,6 +34,9 @@ const server = new Server(
       Using for example myorg/myrepo/myfolder/myfile.html refers to the myorg org, myrepo repo and file at /myfolder/myfile.html.
       Content can be access via: https://admin.da.live/source/<org>/<repo>/<path>.<extension>
       For example, https://admin.da.live/source/myorg/myrepo/myfolder/myfile.html is the URL to access the myfile.html file in the myfolder folder in the myrepo repo in the myorg org.
+      
+      Media tools allow you to lookup media and fragment references from sites.
+      References are stored in .da/mediaindex/media.json and include all images, videos, documents, and fragments used across pages.
     `,
   }
 );
@@ -40,6 +44,7 @@ const server = new Server(
 const tools = [
   ...list.tools,
   ...source.tools,
+  ...media.tools,
 ];
 
 server.setRequestHandler(ListToolsRequestSchema, async () => {
