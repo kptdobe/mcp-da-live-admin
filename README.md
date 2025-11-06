@@ -9,6 +9,7 @@ An MCP (Model Context Protocol) server that provides tools for interacting with 
 - Handle content versioning
 - Copy and move content between locations
 - Manage configurations
+- Lookup Media and Fragment References
 
 ## Cursor AI setup
 
