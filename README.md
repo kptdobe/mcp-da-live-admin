@@ -6,6 +6,9 @@ An MCP (Model Context Protocol) server that provides tools for interacting with 
 
 - List sources and directories in DA repositories
 - Manage source content (get, create, delete)
+- Handle content versioning
+- Copy and move content between locations
+- Manage configurations
 - Lookup Media and Fragment References
 
 ## Cursor AI setup
